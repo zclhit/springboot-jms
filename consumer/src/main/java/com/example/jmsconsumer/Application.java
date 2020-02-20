@@ -50,11 +50,14 @@ public class Application {
         factory.setConnectionFactory(connectionFactory());
         //设置连接数
         factory.setConcurrency("3-10");
-        //重连间隔时间
+        //重连间隔时间ms
         factory.setRecoveryInterval(1000L);
         return factory;
     }
 
+    /**
+     * JMS 监听topic工厂
+     */
     @Bean(name = Constant.TOPIC_CONTAINER)
     public DefaultJmsListenerContainerFactory jmsTopicListenerContainerFactory() {
         DefaultJmsListenerContainerFactory factory =

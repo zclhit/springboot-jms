@@ -33,7 +33,6 @@ public class Application {
      */
     @Bean
     public ConnectionFactory connectionFactory(){
-//        BaseConstant
         ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
         connectionFactory.setBrokerURL(jmsBrokerUrl);
         connectionFactory.setUserName(jmsUser);
@@ -49,6 +48,9 @@ public class Application {
         return new JmsTemplate(connectionFactory());
     }
 
+    /**
+     * JMS 主题订阅模板类
+     */
     @Bean
     public JmsTemplate jmsTopicTemplate(){
         JmsTemplate jmsTemplate = new JmsTemplate(connectionFactory());

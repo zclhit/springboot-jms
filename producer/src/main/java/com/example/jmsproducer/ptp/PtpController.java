@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 点对点模式 - 调用生产者
+ * 点对点模式 - 通过REST方式调用生产者
  * Created by jason-geng on 5/21/17.
  */
 @RestController
